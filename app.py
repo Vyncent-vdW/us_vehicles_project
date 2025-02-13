@@ -12,6 +12,11 @@ df = pd.read_csv("vehicles_us.csv")
 df['manufacturer'] = df['model'].apply(lambda x: x.split()[0])
 df['model'] = df['model'].apply(lambda x: ' '.join(x.split()[1:]))
 
+df['model_year'] = df['model_year'].fillna(df['model_year'].median())
+df['cylinders'] = df.groupby('model')['cylinders'].fillna(df['cylinders'].median())
+df['odometer'] = df.groupby('model')['odometer'].fillna(df['odometer'].median())
+df['paint_color'] = df['paint_color'].fillna('Unknown')
+
 df = df.rename(columns= {'price': 'Price (USD)', 
                          'model_year': 'Model Year', 
                          'model': 'Model', 
