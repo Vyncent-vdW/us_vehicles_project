@@ -11,3 +11,4 @@ numpy == 2.2.2
 plotly == 6.0.0
 streamlit == 1.42.0
 
+Project link: https://us-vehicles-project.onrender.com
