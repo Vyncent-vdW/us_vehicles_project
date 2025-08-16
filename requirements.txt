@@ -1,5 +1,32 @@
-pandas == 2.2.3
-matplotlib == 3.10.0
-numpy == 2.2.2
-plotly == 6.0.0
-streamlit == 1.42.0
+###############################################################################
+# Vehicles US Project Dependencies
+#
+# Focus: Data cleaning, exploratory analysis, and interactive visualization of
+# US used vehicle listings via Streamlit + Plotly. This file lists only the
+# libraries actually required (plus a few clearly marked optional ones).
+#
+# Usage:
+#   python -m venv .venv
+#   .venv\Scripts\Activate.ps1   (Windows PowerShell)
+#   pip install -r requirements.txt
+#   streamlit run app.py
+#
+# Pin versions for reproducibility; update cautiously if adding new features.
+###############################################################################
+
+pandas==2.2.3        # Data loading, cleaning, feature engineering
+numpy==2.2.2         # Numerical helpers (medians, arrays)
+plotly==6.0.0        # Interactive charts (histogram, scatter, parallel coords)
+streamlit==1.42.0    # Web app framework for interactive exploration
+
+# Optional (used mainly inside the notebook for static or supplemental plots)
+matplotlib==3.10.0   # Basic static plotting (if needed in EDA notebook)
+
+# Notebook support (optional – comment out if not using Jupyter)
+ipykernel==6.29.4    # Kernel for Jupyter
+notebook==7.2.2      # Classic notebook interface
+
+###############################################################################
+# Remove lines you don't need to slim the environment. If you later add
+# modeling (e.g., price prediction), consider adding scikit-learn.
+###############################################################################
