@@ -1,4 +1,4 @@
-# 🚗 Vehicles US Project
+# 🚗 Vehicles Listings App
 
 Interactive exploration of the US used vehicles listings dataset. The project contains:
 
